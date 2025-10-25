@@ -1,15 +1,20 @@
 # gblock
 
-A minimal blockchain implementation in Go.
+Proof-of-Work blockchain implementation in Go.
 
-### Core Components
-- **Block**:  
-  - `Data` (content), 
-  - `PrevHash` (previous block's SHA-256), 
-  - `Hash` (SHA-256 of `Data+PrevHash`).
-- **Blockchain**: Slice of linked `Block` structs.
+## Features
 
-### Key Logic
-- `DeriveHash()`: Generates SHA-256 hash from `Data + PrevHash`.
-- `CreateBlock()`: Initializes a block and computes its hash.
-- Genesis block starts the chain with `PrevHash = []byte{}`.
+- SHA-256 cryptographic hashing
+- Proof-of-Work mining with adjustable difficulty
+- Chain validation and tamper detection
+- Timestamp-based block ordering
+
+## Usage
+
+```bash
+go run main.go
+```
+
+## Documentation
+
+- `concepts.md` - Core blockchain concepts
